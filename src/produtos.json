@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Camiseta Básica",
+    "preco": "R$ 49,90",
+    "categoria": "Camisetas",
+    "img": "https://picsum.photos/200?1"
+  },
+  {
+    "id": 2,
+    "nome": "Calça Jeans",
+    "preco": "R$ 99,90",
+    "categoria": "Calças",
+    "img": "https://picsum.photos/200?2"
+  },
+  {
+    "id": 3,
+    "nome": "Vestido Floral",
+    "preco": "R$ 129,90",
+    "categoria": "Vestidos",
+    "img": "https://picsum.photos/200?3"
+  },
+  {
+    "id": 4,
+    "nome": "Camiseta Básica",
+    "preco": "R$ 49,90",
+    "categoria": "Camisetas",
+    "img": "https://picsum.photos/200?1",
+    "promocao": true
+  },
+  {
+    "id": 5,
+    "nome": "Calça Jeans",
+    "preco": "R$ 99,90",
+    "categoria": "Calças",
+    "img": "https://picsum.photos/200?2"
+  }
+]
