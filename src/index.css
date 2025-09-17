@@ -1,106 +1,336 @@
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 2rem;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+:root {
+  --bege-claro: #FEF3C7;
+  --bege: #F5DEB3;
+  --marrom: #5C4033;
+  --marrom-suave: #7C5C3D;
+  --amarelo: #EAB308;
+  --verde: #10B981;
+  --verde-hover: #059669;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-header nav {
-  display: flex;
-  gap: 1rem;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header input {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--bege-claro);
+  color: var(--marrom);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Cards */
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: var(--marrom);
+  line-height: 1.2;
 }
 
-.card {
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+p {
+  color: var(--marrom-suave);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+/* SEÇÕES */
+section {
+  padding: 80px 20px;
 }
 
-.img-container {
+/* HERO */
+.hero {
   position: relative;
-}
-
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ff4d4d;
-  color: white;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-/* Texto */
-.card h3 {
-  font-size: 1.1rem;
-  margin: 0.5rem 1rem 0 1rem;
-}
-
-.card p {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #555;
-  margin: 0.5rem 1rem;
-}
-
-/* Botão WhatsApp com animação */
-.whatsapp-btn {
-  display: block;
-  margin: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  background-color: #25d366;
-  color: white;
-  text-decoration: none;
-  padding: 0.7rem;
-  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero .top-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 50%;
+  background: linear-gradient(135deg, var(--bege), var(--bege-claro));
+  z-index: 1;
+}
+
+.hero .bottom-bg {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 50%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  z-index: 0;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--marrom);
+  animation: slideDown 1s ease-in-out;
+}
+
+/* CARROSSEL */
+.carousel {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: var(--amarelo);
+  border-radius: 9999px;
+}
+
+.tool-card {
+  min-width: 160px;
+  height: 110px;
+  background: var(--bege);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
-  transition: background 0.2s;
-  animation: pulse 1.5s infinite;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.whatsapp-btn:hover {
-  background-color: #1ebe5c;
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+/* PORTFÓLIO */
+.portfolio-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+.project-card {
+  background: #FFF;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card .card-content {
+  padding: 15px;
+}
+
+/* DEPOIMENTOS */
+.testimonial-card {
+  background: #FFF;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+/* FORMULÁRIO */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #FFF;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid var(--amarelo);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+  outline: none;
+}
+
+form a.btn {
+  display: inline-block;
+  background: var(--verde);
+  color: #FFF;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form a.btn:hover {
+  background: var(--verde-hover);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: var(--marrom);
+  color: #FFF;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #FFF;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--amarelo);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .carousel {
+    gap: 15px;
+  }
+}
+
+
+/* ===== DARK MODE MANUAL (via classe) ===== */
+body.dark-mode {
+  background: #1E1E1E;
+  color: #E5E5E5;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #FFF;
+}
+
+body.dark-mode p {
+  color: #CCC;
+}
+
+body.dark-mode .hero .top-bg {
+  background: linear-gradient(135deg, #3a2f28, #1E1E1E);
+}
+
+body.dark-mode .hero .bottom-bg {
+  filter: brightness(0.7);
+}
+
+body.dark-mode .tool-card,
+body.dark-mode .project-card,
+body.dark-mode .testimonial-card,
+body.dark-mode form {
+  background: #2C2C2C;
+  color: #E5E5E5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: #1E1E1E;
+  border: 1px solid #444;
+  color: #FFF;
+}
+
+body.dark-mode form input:focus,
+body.dark-mode form textarea:focus {
+  border-color: #10B981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #E5E5E5;
+}
+
+body.dark-mode footer a {
+  color: #E5E5E5;
+}
+
+body.dark-mode footer a:hover {
+  color: #EAB308;
+}
+
+
+/* seção 2 */
+.titulos2 {
+  display: flex;
+  justify-content: center;
+}
+
+.texts2 {
+  display: flex;
+  justify-content: center;
+}
+
