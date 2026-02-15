@@ -192,7 +192,7 @@ export default function App() {
           <div className="about-image">
             <div className="image-frame">
               <img 
-                src="../src/assets/fotoEu.jpeg" 
+                src="\src\assets\fotoEu.jpeg" 
                 alt="Profile"
                 className="profile-photo"
               />
