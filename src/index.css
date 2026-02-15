@@ -143,17 +143,17 @@ section h2 {
 }
 
 .hero-content h1 {
-  color: white;
+  color: rgb(236, 236, 236);
   font-size: 4rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(95, 95, 95, 0.925);
 }
 
 .hero-content p {
   color: rgba(255,255,255,0.9);
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.897);
 }
 
 .hero-buttons {

@@ -4,7 +4,7 @@ import "./index.css";
 
 import telaNutri from './assets/telaNutri.png'
 import telaDent from './assets/telaDentista.png'
-import telaStore from './assets/telaLoja.jpg' // Você precisará adicionar esta imagem
+import telaStore from './assets/telaLoja.jpg'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -192,7 +192,7 @@ export default function App() {
           <div className="about-image">
             <div className="image-frame">
               <img 
-                src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&w=400&q=80" 
+                src="src/assets/fotoEu.jpeg" 
                 alt="Profile"
                 className="profile-photo"
               />
@@ -212,7 +212,7 @@ export default function App() {
               
               <div className="about-stats">
                 <div className="stat">
-                  <span className="stat-number">50+</span>
+                  <span className="stat-number">10+</span>
                   <span className="stat-label">Projects Completed</span>
                 </div>
                 <div className="stat">
@@ -251,14 +251,6 @@ export default function App() {
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  View Project <ChevronRight size={16} />
-                </a>
               </div>
             </div>
           ))}
@@ -305,7 +297,7 @@ export default function App() {
           <p className="contact-subtitle">Have a project in mind? I'd love to hear about it.</p>
           
           <a 
-            href="https://wa.me/5599999999999" 
+            href="https://wa.me/5541996650912" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="whatsapp-button"
@@ -323,14 +315,11 @@ export default function App() {
           <div className="contact-info">
             <p>Or reach me through social media:</p>
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/kevilin-marcondes" className="social-link" target="_blank" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="social-link" aria-label="Email">
-                <Mail size={20} />
+              <a href="https://kevilin-portfolio.vercel.app/" className="social-link" target="_blank" aria-label="Portfolio">
+                <Star size={20} />
               </a>
             </div>
           </div>
