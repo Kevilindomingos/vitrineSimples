@@ -5,6 +5,7 @@ import "./index.css";
 import telaNutri from './assets/telaNutri.png'
 import telaDent from './assets/telaDentista.png'
 import telaStore from './assets/telaLoja.jpg'
+import fotoEu from './assets/fotoEu.jpeg'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -192,7 +193,7 @@ export default function App() {
           <div className="about-image">
             <div className="image-frame">
               <img 
-                src="\src\assets\fotoEu.jpeg" 
+                src={fotoEu}
                 alt="Profile"
                 className="profile-photo"
               />
