@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Phone, Mail, Instagram, Linkedin, Moon, Sun, Star, ChevronRight, MessageCircle } from "lucide-react";
 import "./index.css";
 
-import telaNutri from './assets/telaNutri.png'
-import telaDent from './assets/telaDentista.png'
+import telaNutri from './assets/telanutr.jpeg'
+import telaDent from './assets/teladent.jpeg'
 import telaStore from './assets/telaLoja.jpg'
 import fotoEu from './assets/fotoEu.jpeg'
 
