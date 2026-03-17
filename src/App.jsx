@@ -207,8 +207,6 @@ export default function App() {
               
               <p>As a <strong>Systems Analysis and Development Technician</strong>, I combine technical expertise with creative solutions to develop high-converting landing pages and automation systems.</p>
               
-              <p>Currently working on internal development projects at <strong>LAFORT</strong>, I'm constantly refining both my technical and interpersonal skills. I believe that constructive feedback is the foundation of professional growth.</p>
-              
               <p>Naturally curious and committed to lifelong learning, I maintain an active GitHub repository documenting my progress and exploring new technologies.</p>
               
               <div className="about-stats">
